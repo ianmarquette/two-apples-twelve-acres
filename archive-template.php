@@ -18,7 +18,7 @@ Template Name: Archive
 
 									global $post;
 
-									$args = array( 'order' => 'DESC' );
+									$args = array( 'order' => 'DESC', 'posts_per_page'=> -1 );
 
 									$myposts = get_posts( $args );
 

@@ -1,0 +1,310 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+
+/*********************
+CLEARFIXIN'
+*********************/
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+/*********************
+TOOLS
+*********************/
+
+// BORDER-BOX ALL THE THINGS! (http://paulirish.com/2012/box-sizing-border-box-ftw/)
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.image-replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #000;
+$darkgrey:			#232323;
+$midgrey:			#5a5a5a;
+$lightgrey:			#656565;
+$white:             #fff;
+
+$tan:				#e8ae46;
+
+$bones-pink:        #f01d4f;
+$bones-blue:        #1990db;
+
+$link-color:        $lightgrey;
+$link-hover:        $tan;
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+$sans-serif:        "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "ff-meta-serif-web-pro", "Georgia", Cambria, Times New Roman, Times, serif;
+
+
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('library/fonts/font-name.eot');
+    	src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+
+// text alignment
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+
+
+// alerts and notices
+%alert {
+	margin: 3.2em auto 1.6em;
+	padding: 0.6em 1em;
+	display: block;
+	width: 100%;
+}
+
+.alert-help {
+	@extend %alert;
+	border-color: darken($alert-yellow, 5%);
+	background: $alert-yellow;
+	margin: 1.6em auto;
+	padding: 1em;
+	border: 1px solid;
+	display: block;
+	width: 100%;
+}
+
+.alert-info {
+	@extend %alert;
+	background: $alert-blue;
+}
+
+.alert-error {
+	@extend %alert;
+	border-color: darken($alert-red, 5%);
+	background: $alert-red;
+}
+
+.alert-success {
+	@extend %alert;
+	border-color: darken($alert-green, 5%);
+	background: $alert-green;
+}
+
+/*********************
+TRANSITION
+*********************/
+
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+
+@mixin transition($transition...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes:      ("-webkit", "-ms", "-o",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+
+  transition: $transition;
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdue it.
+*********************/
+
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+/*********************
+BOX SIZING
+*********************/
+
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing:    $type;
+	-ms-box-sizing:     $type;
+	box-sizing:         $type;
+}
+
+
+/*********************
+BUTTONS
+*********************/
+
+.button, .button:visited {	
+	background: $tan;
+	border: 1px solid darken($tan, 13%);
+	border-top-color: darken($tan, 7%);
+	border-left-color: darken($tan, 7%);
+	border-radius: 5px;	
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $serif;
+	font-size: 87.5%;
+	margin-bottom: 1.9em;
+	padding: 1em 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100%;
+	@include transition(all 0.3s ease-out);
+
+
+	&:hover, &:focus {
+		color: $white;
+	  	border: 1px solid darken($tan, 13%);
+	  	border-top-color: darken($tan, 20%);
+	 	border-left-color: darken($tan, 20%);
+		@include css-gradient(darken($tan, 5%), darken($tan, 10%));
+		@include transition(all 0.3s ease-out);
+	}
+
+	&:active {
+		@include css-gradient(darken($tan, 5%), $tan);
+		@include transition(all 0.3s ease-out);
+	}
+}
+
+
+/*********************
+GRID
+*********************/
+
+$onecol		: 6.5%;   
+$twocol		: 15%;      
+$threecol	: 23.5%;      
+$fourcol	: 32%;       
+$fivecol    : 40.5%;      
+$sixcol     : 49%;      
+$sevencol  	: 57.5%; 
+$eightcol  	: 66%;  
+$ninecol   	: 74.5%;     
+$tencol    	: 83%;  
+$elevencol 	: 91.5%;      
+$twelvecol 	: 100%; 
+
+
+
+/*********************
+SPRITES
+*********************/
+
+$sprite: logo, logo_small, page_title_spiral, tagline_spiral, info_spiral, page_divider, facebook_icon, twitter_icon, rss_icon, email_icon, left_grey_arrow, right_grey_arrow, left_tan_arrow, right_tan_arrow;
+$spritegrid:200;
+
+@mixin sprite-bg($crop, $x:0, $y:$x, $hover:true) { 
+    $i:0; 
+    @each $part in $sprite { 
+        @if ($part == $crop) { 
+            $i:index($sprite, $part);
+        } 
+    }
+    @if $i == 0 { 
+        @warn "sprite-bg can't find '#{$crop}' in $sprite"; 
+    } 
+    background: url("../images/two-apples-twelve-acres-sprite.png") no-repeat ($x * 1px) ((($i - 1) * ($spritegrid * -1px)) + $y);
+    /*background-image:url("../images/two-apples-twelve-acres-sprite.png");
+    background-position-x: ($x * 1px); 
+    background-position-y: ((($i - 1) * ($spritegrid * -1px)) + $y); 
+    background-repeat:no-repeat; */
+    @if $hover { 
+        &:hover, 
+        &:focus { 
+            background-position-x: (($spritegrid * -1px) + ($x * 1px));
+        } 
+    } 
+    .svg & { background-image:url("../images/two-apples-twelve-acres-sprite.svg"); 
+    } 
+}
+
+/*********************
+CENTRE ALIGN BOX ELEMENTS
+*********************/
+
+@mixin auto-margin {
+	margin: 0 auto;
+}
+
+
+

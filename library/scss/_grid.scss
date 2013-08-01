@@ -1,0 +1,79 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+
+The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+together, let's see how this works out. If you want to use 1140, the original 
+values are commented out on each line.
+
+******************************************************************/
+
+
+/*
+.onecol    { width: 5.801104972%;  }      
+.twocol    { width: 14.364640883%; }       
+.threecol  { width: 22.928176794%; }  
+.fourcol   { width: 31.491712705%; }    
+.fivecol   { width: 40.055248616%; }     
+.sixcol    { width: 48.618784527%; }       
+.sevencol  { width: 57.182320438000005%; } 
+.eightcol  { width: 65.74585634900001%; }  
+.ninecol   { width: 74.30939226%; }        
+.tencol    { width: 82.87292817100001%; } 
+.elevencol { width: 91.436464082%; }       
+.twelvecol { width: 99.999999993%; }        */
+
+
+$onecol		: 6.5%;   
+$twocol		: 15%;      
+$threecol	: 23.5%;      
+$fourcol	: 32%;       
+$fivecol    : 40.5%;      
+$sixcol     : 49%;      
+$sevencol  	: 57.5%; 
+$eightcol  	: 66%;  
+$ninecol   	: 74.5%;     
+$tencol    	: 83%;  
+$elevencol 	: 91.5%;      
+$twelvecol 	: 100%; 
+
+.onecol    { width: 6.5%;  }      
+.twocol    { width: 15%; }       
+.threecol  { width: 23.5%; }      
+.fourcol   { width: 32%; }       
+.fivecol   { width: 40.5%; }      
+.sixcol    { width: 49%; }      
+.sevencol  { width: 57.5%; } 
+.eightcol  { width: 66%; }  
+.ninecol   { width: 74.5%; }     
+.tencol    { width: 83%; }  
+.elevencol { width: 91.5%; }      
+.twelvecol { width: 100%; }       
+
+// layout & column defaults
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+  position: relative;
+  float: left;
+  margin-left: 2%;
+}
+
+.first {
+  margin-left: 0;
+}
+
+.last {
+  float: right;
+}

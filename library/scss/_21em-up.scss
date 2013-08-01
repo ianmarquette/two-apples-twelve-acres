@@ -1,0 +1,43 @@
+/******************************************************************
+Site Name: Two Apples Twelve Acres
+Author: Ian Marquette
+
+Stylesheet: 21em width
+
+******************************************************************/
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+#nav {
+
+	ul {
+
+		li {
+
+			a {
+				padding: 1.6em 0.7em 0.8em;
+				
+			}
+		}
+	}
+
+	p {
+		margin: 0.4em auto 2.35em;
+	}
+}
+
+
+
+/*********************
+HEADER STYLES
+*********************/
+
+header.article-header {
+	img {
+		height: auto;
+		width: 100%;
+	}
+}

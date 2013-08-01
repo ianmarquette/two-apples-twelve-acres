@@ -1,0 +1,247 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+
+
+/*********************
+HEADER STYLES
+*********************/
+
+
+.header-image {
+
+	h1 {
+		font-size: 400%;
+
+	}
+}
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+
+/* entry content */
+.entry-content {		
+
+	max-width: 1000px;
+	width: $twelvecol;
+
+	p {
+		width: $sixcol;
+
+		&:first-child {
+			font-size: 125%;
+		}
+	}
+			
+} /* end .entry-content */
+
+a {
+			h2.archive-title {
+				margin: 1.4em 0 0.3em 25.4%;
+				text-align: left;
+				width: 74.6%;
+
+			}
+		}
+
+		.entry-content {
+
+			p {
+				margin-bottom: 1.2em;
+
+
+			}
+
+			p.archive-date {
+				float: left;
+				text-align: right;
+				width: 23.5%;
+
+		}
+	}
+
+	.entry-content li.archive-listing p:nth-of-type(2) {
+		margin-bottom: 1.2em;
+	}
+
+/* our story page styles */	
+	
+.entry-content .bio-content {
+		width: $sixcol;
+	}
+
+
+.bio-left, .bio-right {
+	float: left;
+	width: $sixcol; 
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		margin-right: 0;
+		width: 100%;
+	}
+
+	img {
+		-webkit-border-radius: 50%; 
+        border-radius: 50%;
+		float: right;
+		margin: 0 2.35% 2.35% 0;	
+	}	
+
+	h3 {
+		float: left;
+		font-family: $serif;
+		font-weight: 700;
+		margin: 0;
+		width: 69.9%;
+	}
+
+	p.bio-text {
+		color: $lightgrey;
+		font-size: 87.5%;
+		width: 100%;
+	}
+}
+
+.bio-right {
+	float: right;
+}
+
+.entry-content .story-content {
+	float: left;
+	margin: 0 2%;
+	width: $sixcol;
+
+	p {
+		width: 100%;
+	}
+}
+
+
+
+
+	/* end our story */	
+
+
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+
+#comments-content {
+	max-width: 1000px;
+	width: $twelvecol; 
+
+	article {
+		margin-left: 10.2%;
+		width: 69.4%;
+	}
+}
+
+.commentlist .comment_content {
+	max-width: 1000px;
+	width: $twelvecol; 
+	@include auto-margin;
+
+	p {
+
+		margin-left: 15%;
+		clear: left;
+		width: 85%;
+	}
+	}
+
+h3#comments {
+		font-weight: 700;
+		margin: 0.15em auto 0;
+		width: $sixcol;
+	}
+
+.commentlist {
+	.vcard {
+		img.avatar {
+			border-radius: 50%;
+			float: left;
+			display: inline-block;
+			height: auto;
+			margin-left: 0;
+			margin-right: 3.2%;
+			width: 11.5%;
+		}
+	}
+
+
+}
+
+.respond-form {
+	width: $sixcol;
+}
+
+.alert-info {
+	border: none;
+	margin: 3.2em 0 1.6em 5.3em;
+	width: 85.4%;
+}
+
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+
+.page-navi-links {
+	display: block;
+
+
+		a {
+			border-radius: 50%;
+			height: 7em;
+			left: -3.5em;
+			opacity: 0.7;
+			overflow: hidden;
+			position: fixed;
+			text-indent: 200%;
+			top: 33%;
+			white-space: nowrap;
+			width: 7em;
+			@include sprite-bg('left_grey_arrow', 60, 40, false);
+			background-position-x: 60px;
+			background-position-y: -1960px;
+			background-color: $darkgrey;
+
+			&:hover {
+			background-color: $darkgrey;
+			margin-left: 1em;
+			opacity: 1;
+		}
+
+		&:nth-child(2) {
+			border-left: 0px;
+			left: auto;
+			right: -3.5em;
+			@include sprite-bg('right_grey_arrow', 30, 40, false);
+			background-position-x: 30px;
+			background-position-y: -2160px;
+			background-color: $darkgrey;
+
+			&:hover {
+				left: auto;
+				margin-right: 1em;
+			}
+		}
+
+
+
+	}
+} 

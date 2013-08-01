@@ -1,0 +1,155 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+	#logo {
+		margin: 1.5em 0 0;
+
+		a {
+			@include sprite-bg('logo', 0, 0, false);
+			display: block;
+			//float: left;
+			height: 7.8em;
+			@include auto-margin;
+			text-indent: -10000px;
+			width: 19em; // 130px/16px
+		}
+	}
+
+.header-image {
+
+	h1 {
+		font-size: 200%;
+		left: auto;
+	}
+}
+
+	
+/*********************
+NAVIGATION STYLES
+*********************/
+
+
+	/* .menu is clearfixed inside mixins.scss */
+	#nav {
+		ul {
+			li {
+				a {
+					@include transition(all 0.3s ease-out);
+					/*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+					&:hover, &:focus {
+						color: $tan;
+
+					}
+				}	
+				
+			} /* end .menu ul li */
+
+			p {
+				margin: 0.4em auto 1.6em;
+			}
+			
+			/* highlight current page */
+			li.current-menu-item, 
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}  /* end current highlighters */
+		} /* end .menu ul */
+
+	} /* end .menu */
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	margin-top: 0em;
+}
+
+/* entry content */
+.entry-content {		
+
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}
+			
+} /* end .entry-content */
+		
+
+.bio-left, .bio-right {	
+
+	li {
+	
+	}
+
+}
+
+	/* end our story */
+
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+
+	.commentlist .comment_content {
+		
+		p{
+			
+			font-size: 1em;
+			margin: 0.1em 0 1.6em 0;
+			line-height: 1.5em;
+			width: $twelvecol;
+
+	} /* end .commentlist .comment_content */
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+	
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+.footer-links {
+	ul {
+		li {}
+	}
+} /* end .footer-links */
+			

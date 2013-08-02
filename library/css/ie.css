@@ -332,12 +332,6 @@ come into play. Have fun!
 
 ******************************************************************/
 /*********************
-GENERAL STYLES
-*********************/
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-/*********************
 HEADER STYLES
 *********************/
 .header-image h1 {
@@ -347,22 +341,19 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-#nav {
-  /* highlight current page */
-  /* end current highlighters */ }
-  #nav p:before, #nav p:after {
-    background: url("../images/two-apples-twelve-acres-sprite.png") no-repeat 0px -800px;
-    /*background-image:url("../images/two-apples-twelve-acres-sprite.png");
-    background-position-x: ($x * 1px); 
-    background-position-y: ((($i - 1) * ($spritegrid * -1px)) + $y); 
-    background-repeat:no-repeat; */
-    display: inline-block;
-    height: 0.7em;
-    margin: 0 0.6em;
-    width: 0.7em;
-    content: ""; }
-    .svg #nav p:before, .svg #nav p:after {
-      background-image: url("../images/two-apples-twelve-acres-sprite.svg"); }
+#nav p:before, #nav p:after {
+  background: url("../images/two-apples-twelve-acres-sprite.png") no-repeat 0px -800px;
+  /*background-image:url("../images/two-apples-twelve-acres-sprite.png");
+  background-position-x: ($x * 1px); 
+  background-position-y: ((($i - 1) * ($spritegrid * -1px)) + $y); 
+  background-repeat:no-repeat; */
+  display: inline-block;
+  height: 0.7em;
+  margin: 0 0.6em;
+  width: 0.7em;
+  content: ""; }
+  .svg #nav p:before, .svg #nav p:after {
+    background-image: url("../images/two-apples-twelve-acres-sprite.svg"); }
 
 /* end .nav */
 /*********************
@@ -419,17 +410,6 @@ SIDEBARS & ASIDES
       margin-top: 0.75em;
       padding-left: 1em; }
 
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
 /*********************
 FOOTER STYLES
 *********************/

@@ -22,47 +22,6 @@ body {
 	color: $darkgrey;
 }
 
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
-
-.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
-.blog {}                          /* blog template page */
-.archive {}                       /* archive page */
-.date {}                          /* date archive page */
-	.date-paged-1 {}                /* replace the number to the corresponding page number */
-.search {}                        /* search page */
-	.search-results {}              /* search result page */
-	.search-no-results {}           /* no results search page */
-	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
-.error404 {}                      /* 404 page */
-.single {}                        /* single post page */
-	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
-	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
-.attachment {}                    /* attatchment page */
-	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
-	.attachment-mime-type {}        /* style mime type pages */
-.author {}                        /* author page */
-	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
-	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
-.category {}                      /* category page */
-	.category-1 {}                  /* individual category page (i.e. body.category-6) */
-	.category-paged-1 {}            /* replace the number to the corresponding page number */
-.tag {}                           /* tag page */
-	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
-	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
-.page-template {}                 /* custom page template page */
-	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
-	.page-paged-1 {}                /* replace the number to the corresponding page number */
-	.page-parent {}                 /* parent page template */
-	.page-child {}                  /* child page template */
-	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
-.logged-in {}                     /* if user is logged in */
-.paged {}                         /* paged items like search results or archives */
-	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
-
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -87,10 +46,6 @@ a {
 		color: $link-hover;
 	}
 
-	/* on click */
-	&:active {
-
-	}
 
 	/* mobile tap color */
 	&:link {
@@ -154,7 +109,6 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-.header {}
 
 	#logo {
 		margin-top: 1.7em;
@@ -249,14 +203,9 @@ and more scalable.
 				the style.scss file where it's relevant. We want to
 				keep this file as small as possible!
 				*/
-				&:hover, &:focus {
-
-				}
+				
 			}
 
-			&:first-child {}
-
-			&:last-child {}
 
 			/*
 			so you really have to rethink your dropdowns for mobile.
@@ -273,16 +222,8 @@ and more scalable.
 					a {
 						padding-left: 30px;
 
-						&:hover,
-						&:focus {}
-
-						&:link {}
 
 					}
-
-					&:first-child {}
-
-					&:last-child {}
 
 				}
 
@@ -302,17 +243,6 @@ and more scalable.
 		text-align: center;
 	
 	}
-
-
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current-page-ancestor {
-
-		a {}
-
-	}  /* end current highlighters */
 	
 
 } /* end .nav */
@@ -332,33 +262,6 @@ POSTS & CONTENT STYLES
 #content {
 	margin-top: 0.8em;
 }
-
-		.hentry {
-
-			header {}
-
-			footer {}
-
-		} /* end .hentry */
-
-		.single-title,
-		.page-title {}
-
-		.single-title {}
-
-		.page-title {}
-
-		.archive-title { }
-
-		/* want to style individual post classes? Booya! */
-		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
-		.attachment {}      /* general style on an attatchment */
-		.sticky {}          /* sticky post style */
-		.hentry {}          /* hentry class */
-		.category-slug {}   /* style by category (i.e. category-videos) */
-		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
 		/* post meta */
 		.byline {
@@ -420,36 +323,6 @@ POSTS & CONTENT STYLES
 			}
 
 
-			ul, ol, table, dl {}
-
-			ul, ol {
-
-				li {}
-
-			}
-
-			ul {
-
-				li {}
-
-			}
-
-			ol {
-
-				li {}
-
-			}
-
-			blockquote {
-
-				&:before {}
-
-			}
-
-			dl {}
-
-			dt {}
-
 			dd {
 				margin-left: 0;
 				font-size: 0.9em;
@@ -506,30 +379,6 @@ POSTS & CONTENT STYLES
 
 		} /* end .wp-caption */
 
-		/* image gallery styles */
-		.gallery {
-
-			dl {
-
-				a {}
-
-				img {}
-
-			}
-
-			dt {}
-
-			dd {}
-
-		} /* end .gallery */
-
-		/* gallery caption styles */
-		.gallery-caption {}
-
-		.size-full {}
-		.size-large {}
-		.size-medium {}
-		.size-thumbnail {}
 
 		/* archive page styles */
 
@@ -702,12 +551,6 @@ PAGE NAVI STYLES
 			border-bottom: 2px solid #f01d4f;
 			position: relative;
 
-			a {
-				/* hovering on current page link */
-				&:hover,
-				&:focus {}
-
-			}
 
 		} /* end .bones_page_navi .bpn-current */
 
@@ -729,37 +572,7 @@ PAGE NAVI STYLES
 			background: none;
 		}
 
-		/* previous link */
-		li.bpn-prev-link {
-			a {
-				&:hover,
-				&:focus {}
-			}
-		}
 
-		/* next page link */
-		li.bpn-next-link {
-			a {
-				&:hover,
-				&:focus {}
-			}
-		}
-
-		/* first page link */
-		li.bpn-first-page-link {
-			a {
-				&:hover,
-				&:focus {}
-			}
-		}
-
-		/* last page link */
-		li.bpn-last-page-link {
-			a {
-				&:hover,
-				&:focus {}
-			}
-		}
 
 	} /* end .bones_page_navi */
 
@@ -791,27 +604,12 @@ COMMENT STYLES
 	width: $elevencol; 
 	@include auto-margin;
 
-
-
-
-	/* number of comments span */
-span {}
-
 }
 
 h3#comments {
 		font-weight: 700;
 		margin: 1.6em auto 0;
 	}
-
-.comment-nav {
-
-	ul {
-
-		li {}
-
-	}
-}
 
 
 .commentlist {
@@ -860,27 +658,6 @@ h3#comments {
 		padding-bottom: 0;
 	}
 
-	li.depth-2 {}
-	li.depth-3 {}
-	li.depth-4 {}
-	li.depth-5 {}
-
-	/* general comment classes */
-	.alt {}
-	.odd {
-	}
-	.even {
-	}
-	.parent {}
-	.comment {}
-	.children {}
-	.pingback {}
-	.bypostauthor {}
-	.comment-author {}
-	.comment-author-admin {}
-	.thread-alt {}
-	.thread-odd {}
-	.thread-even {}
 
 	/* vcard */
 	.vcard {
@@ -897,8 +674,6 @@ h3#comments {
 					color: $tan;
 				}
 			}
-
-			a.url {}
 
 		}
 
@@ -920,8 +695,6 @@ h3#comments {
 
 		}
 
-		img.photo {}
-
 		img.avatar {
 			border-radius: 50%;
 			display: none;
@@ -935,19 +708,6 @@ h3#comments {
 	} /* end .commentlist .vcard */
 
 
-	/* comment meta */
-	.comment-meta {
-
-		a {}
-
-	}
-
-	.commentmetadata {
-
-		a {}
-
-	}
-
 	/* comment content */
 	.comment_content {
 		
@@ -958,7 +718,7 @@ h3#comments {
 			font-size: 1em;
 			margin: 0.1em $threecol 1.6em 0;
 			line-height: 1.5em;
-			width: $sixcol;
+			width: $twelvecol;
 		}
 
 	} /* end .commentlist .comment_content */
@@ -1078,8 +838,6 @@ COMMENT FORM STYLES
 	}
 }
 
-	/* comment submit button */
-	#submit {}
 
 	/* comment form title */
 	#comment-form-title {
@@ -1088,13 +846,6 @@ COMMENT FORM STYLES
 		width: $twelvecol;
 	}
 
-	/* cancel comment reply link */
-	#cancel-comment-reply {
-		a {}
-	}
-
-	/* logged in comments */
-	.comments-logged-in-as {}
 
 	/* allowed tags */
 	#allowed_tags {
@@ -1106,34 +857,6 @@ COMMENT FORM STYLES
 		margin: 0 20px 1.1em;
 	}
 
-/*********************
-SIDEBARS & ASIDES
-*********************/
-
-.sidebar {}
-
-	.widgettitle {}
-
-	.widget {
-
-		ul {
-
-			li {
-
-				&:first-child {}
-
-				&:last-child {}
-
-				a {}
-
-				/* deep nesting */
-				ul {}
-
-			}
-
-		}
-
-	}
 
 /*********************
 FOOTER STYLES
@@ -1197,26 +920,4 @@ ul.subscribe-links {
 	float: none;
 	}
 }
-
-	/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
-	.footer-links {
-
-		ul {
-
-			li {}
-
-		}
-
-	} /* end .footer-links */
-
-
-	.copyright {}
 

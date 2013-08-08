@@ -88,6 +88,13 @@ POSTS & CONTENT STYLES
 	}
 }
 
+	.alignleft, img.alignleft,
+	.alignright, img.alignright,
+	.aligncenter, img.aligncenter {
+		width: $tencol;
+	}
+
+
 /******************************************************************
 COMMENT STYLES
 ******************************************************************/

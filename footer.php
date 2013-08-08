@@ -21,7 +21,7 @@
 		<?php wp_footer(); ?>
 
 		<script type="text/javascript">
-		$(".h1").fitText(2.7);
+		$(".h1").fitText(2.7, { maxFontSize: '70px' });
 	</script>
 
 	</body>

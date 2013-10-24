@@ -278,23 +278,23 @@ POSTS & CONTENT STYLES
 				@include sprite-bg('info_spiral', 0, 0, false);
 				display: inline-block;
 				height: 0.7em;
-				margin: 0 auto;
+				margin: 0 0.5em;
 				width: 0.7em;
 
 			}
 
 			time, span.comments-link {
 				display: inline-block;
-				width: 40%;
+				/*width: 40%;*/
 			}
 
 			time {
-				margin-right: 1em;
+				/*margin-right: 1em;*/
 				text-align: right;
 			}
 
 			span.comments-link {
-				margin-left: 1em;
+				/*margin-left: 1em;*/
 				text-align: left;
 			}
 

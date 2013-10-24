@@ -502,7 +502,7 @@ a h2.archive-title {
   width: 23.5%; }
 .entry-content ul {
   margin: 0 auto 1.6em;
-  width: 49%; }
+  width: 47%; }
 
 .entry-content li.archive-listing p:nth-of-type(2) {
   margin-bottom: 1.2em; }
@@ -534,13 +534,13 @@ a h2.archive-title {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     float: right;
-    margin: 0 2.35% 2.35% 0; }
+    margin: 0 2.35% 2.35% 2.35%; }
   .bio-left h3, .bio-right h3 {
     float: left;
     font-family: "ff-meta-serif-web-pro", "Georgia", Cambria, Times New Roman, Times, serif;
     font-weight: 700;
     margin: 0;
-    width: 69.9%; }
+    width: 100%; }
   .bio-left p.bio-text, .bio-right p.bio-text {
     color: #656565;
     font-size: 87.5%;

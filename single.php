@@ -36,6 +36,8 @@
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
 
+									<p>Share this post on <a target="_blank" title="Share on Facebook" rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>">Facebook</a> or <a target="_blank" href="http://twitter.com/share?url=<?php the_permalink(); ?>">Twitter</a>.</p>
+
 									<p class="byline vcard">
 										<?php
 										printf(__('<time class="updated" datetime="%1$s" pubdate>%2$s</time>', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')) ); ?>
